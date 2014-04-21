@@ -45,7 +45,7 @@ namespace SparkleShare
             string avatar_file_path;
             
             try {
-                avatar_file_path = Path.Combine (avatars_path, email.MD5 () + ".png");
+                avatar_file_path = Path.Combine (avatars_path, email.MD5 ());
                 
             } catch (InvalidOperationException e) {
                 SparkleLogger.LogInfo ("Avatars", "Error fetching avatar for " + email, e);
